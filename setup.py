@@ -23,5 +23,10 @@ setup(
     author_email='info@blockcerts.org',
     long_description=long_description,
     packages=find_packages(),
-    install_requires=reqs
+    install_requires=reqs,
+    entry_points={
+        'console_scripts': [
+            'verify-certificate = cert_verifier.verifier:main',
+        ]
+    }
 )
